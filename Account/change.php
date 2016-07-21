@@ -13,20 +13,18 @@
 
 	?>
 	<script>
-		function check() {
-			var answer = document.getElementsByName("answer").value;
-			if(answer == "yes"){
+		function yes() {
 				document.getElementById("question").style.display="none";
 				document.getElementById("update").style.display="block";
-			} else {
-				alert(answer)//parent.location = "/Stemhire/applicant.php";
-			}
+		}
 
+		function no() {
+			parent.location = "../applicant.php"
 		}
 
 	</script>
 	<div id="question"><span>Will you like to change your username and password?</span><br>
-	<input type="radio" name="answer" value="yes">Yes <input type="radio" name="answer" value="no">No <button onclick="check()">Submit</button></div>
+	<button onclick="yes()">Yes</button><button onclick="no()">No</button></div>
 	<div id="update" style="display: none;">
 		<form method="post">
 			<input name="username" placeholder="New Username">
