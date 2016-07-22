@@ -20,7 +20,7 @@
 				header("Location: /Stemhire/home.php");
 			}
 		} else {
-			$errMsg = "Wrong Credential";
+			$err = "Wrong Credential";
 		}
 	}
 ?>
@@ -33,5 +33,5 @@
 
 <?php 
 	include_once "../layout/footer.php";
-	if(isset($errMsg)){echo $errMsg;} 
+	if(isset($err)){echo $err;} 
 ?>
